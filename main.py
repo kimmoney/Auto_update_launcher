@@ -31,7 +31,8 @@ if ver_file == ver_git :
     print("open")
     pass
 else:
-    os.remove(dir)
+    try:os.remove(dir)
+    except:pass
     print("Installing new version")
     url = "https://github.com/kimmoney/gongzone_releases/releases/download/{}/gongzone_keep_point.exe".format(ver_git)
     file = requests.get(url,stream = True)
