@@ -34,7 +34,8 @@ else:
     try:os.remove(dir)
     except:pass
     print("Installing new version")
-    url = "https://github.com/kimmoney/gongzone_releases/releases/download/{}/gongzone_keep_point.exe".format(ver_git)
+    print(ver_git)
+    url = "https://github.com/kimmoney/gongzone_releases/releases/download/v{}/gongzone_keep_point.exe".format(ver_git)
     file = requests.get(url,stream = True)
     print(url)
     parsed_file = urlparse(url)
